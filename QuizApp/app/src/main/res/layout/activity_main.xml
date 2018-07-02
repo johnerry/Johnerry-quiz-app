@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp">
+
+            <TextView
+                android:id="@+id/score_text"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#ff0000"
+                android:layout_height="wrap_content"
+                android:text="Score: 0"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/question_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="#ff0000"
+                android:layout_marginTop="12dp"
+                android:text="Question 1/10"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/question_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/_1" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#ff0000"
+            android:gravity="center"
+            android:text="..In which city can we find this famous landmark?"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/choice1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="A:  Acropolis of Athens, Greece"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/choice2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="B:  Acropolis of Athens, Greece"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/choice3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="C:  Acropolis of Athens, Greece"
+            android:textAllCaps="false" />
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#ff0000"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="12dp"
+                android:onClick="reset"
+                android:textSize="16sp"
+                android:text="Reset" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/rest_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="42dp"
+            android:paddingBottom="56dp"
+            android:background="#ff0000"
+            android:textColor="#FFFFFF"
+            android:text="You got 3 questions"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_alignBottom="@+id/rest"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="42dp"
+            android:layout_marginRight="8dp"
+            android:background="#FF15C17C"
+            android:textColor="#FFFFFF"
+            android:text="RESTART"
+            android:onClick="reset"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
